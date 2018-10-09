@@ -26,13 +26,11 @@ const WaspLinkMutate = (props, query, variables, refetch) => {
     }
   }
 
+  // Make sure Query is an Object before processing
   if(typeof query != 'Object') {
-    // Make sure Query is an Object before processing
-    if(typeof query != 'Object') {
-      return Promise.reject(
-        "Query must be a GQL Object. Given: " + typeof variables
-      )
-    }
+    return Promise.reject(
+      "Query must be a GQL Object. Given: " + typeof variables
+    )
   }
 
   // Run Mutation with no Refetch option
