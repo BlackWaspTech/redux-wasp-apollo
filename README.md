@@ -6,9 +6,13 @@
 
 ---
 
+# Purpose
+
+Updating to Apollo 2.0+ and don't want to completely remove redux store/state? Just use ReduxWaspApollo to bridge the gap between the two!
+
 # Usage
 
-Pass your Apollo Client down as a prop. Pass props into the Wasp-Redux functions.
+Pass your Apollo Client down as a prop. Pass props into the ReduxWaspApollo functions.
 
 # Example
 
