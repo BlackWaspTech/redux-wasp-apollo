@@ -6,9 +6,13 @@
 
 ---
 
+# Purpose
+
+Updating to Apollo 2.0+ and don't want to completely remove redux store/state? Just use ReduxWaspApollo to bridge the gap between the two! Pass in the new data you need to update Apollo's Cache with and let ReduxWaspApollo do the rest.
+
 # Usage
 
-Pass your Apollo Client down as a prop. Pass props into the Wasp-Redux functions.
+Pass your Apollo Client down as a prop. Pass props into the ReduxWaspApollo functions.
 
 # Example
 
@@ -89,6 +93,42 @@ class App extends Component {
 
 
 export default connect(mapStateToProps)(App);
+```
+
+### queries.js
+```js
+import gql from 'graphql-tag';
+
+
+let addUser = gql`
+  mutation addUser($name: String!, $pass: String!){
+    addUser(name: $name, password: $pass) {
+      userName
+      userPass
+    }
+  }
+`
+
+let getUser = gql`
+  query($id: ID!){
+    user(id: $id) {
+      userName
+    }
+  }
+`
+let getAllUsers = gql`
+  {
+    getUsers {
+      userName
+    }
+  }
+`
+
+export {
+  addUser,
+  getUser,
+  getAllUsers
+}
 ```
 
 ## Code of Conduct
