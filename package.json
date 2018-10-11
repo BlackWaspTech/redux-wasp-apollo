@@ -21,7 +21,7 @@
     "apollo-link-state"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "husky": {
     "hooks": {
@@ -36,6 +36,7 @@
   },
   "devDependencies": {
     "husky": "^1.0.0",
+    "jest": "^23.6.0",
     "lint-staged": "^7.3.0",
     "prettier": "^1.14.3"
   }
