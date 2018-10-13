@@ -1,6 +1,6 @@
 {
   "name": "redux-wasp-apollo",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "description": "Provides integration between redux-wasp and apollo-link-state",
   "main": "index.js",
   "author": "BlackWaspTech (https://github.com/BlackWaspTech)",
@@ -21,7 +21,9 @@
     "apollo-link-state"
   ],
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "contributors:add": "all-contributors add",
+    "contributors:generate": "all-contributors generate"
   },
   "husky": {
     "hooks": {
@@ -35,6 +37,7 @@
     ]
   },
   "devDependencies": {
+    "all-contributors-cli": "^5.4.0",
     "husky": "^1.0.0",
     "jest": "^23.6.0",
     "lint-staged": "^7.3.0",
